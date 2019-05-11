@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #66788a;
+}
+
+.navbar {
+  background: #1b3146;
+  color: #8e979f;
+}
+.orange-text {
+  color: rgb(228, 149, 74);
+}
+
+/* The wrapper contains all of the page's content, using flex box */
+.wrapper {
+  flex: 1;
+  padding-top: 15px;
+  padding-bottom: 130px;
+  overflow: auto;
+  background: #8e979f;
+}
+
+/* footer styling */
+.footer {
+  color:  #8e979f;
+  padding: 5px;
+  background: #1b3146;
+}
+
+/* styling the header element */
+.sightings-header {
+  padding: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: #66788a;
+}
+
+/* Adding styles to the aside and filter form */
+
+#filter-btn {
+  background: #1b3146;
+  color: rgb(228, 149, 74);
+}
+
+#table-area th {
+  text-align: center;
+}
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 70px;
+}
+
+/* input placeholder color changes */
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #8e979f;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #8e979f;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #8e979f;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #8e979f;
+}
+
+/* media queries which will only be activated at specific screen sizes */
+@media (max-width: 800px) {
+  #table-area td {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  #table-area thead {
+    display: none;
+  }
+
+  #table-area tr td:first-child {
+    font-size: 1.8em;
+    font-weight: bold;
+    background: #1b3146;
+  }
+
+  #table-area tr td:last-child {
+    margin-bottom: 20px;
+  }
+
+  #table-area tr td:last-child::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    content: " ";
+    background: aliceblue;
+  }
+
+  #table-area td {
+    font-size: 1.25em;
+  }
+
+  #table-area tbody td {
+    display: block;
+    text-align: center;
+  }
+
+  #table-area tbody td::before {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    content: attr(data-th);
+}
